@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+  <title>Ride Share Sydney</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 80%;
+      max-width: 600px;
+    }
+.left {
+      text-align: left !important;
+    }
+    h1 {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    h3 {
+      color: #555;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+h4 {
+      color: #777;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      cursor: pointer; /* Add cursor pointer to indicate clickable */
+      border-bottom: 1px solid #ccc; /* Add bottom border for separation */
+      padding-bottom: 5px; /* Add space below text */
+      position: relative; /* Position relative for pseudo-element */
+    }
+    h4::after {
+      content: "\25BA"; /* Unicode character for right arrow */
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8em; /* Adjust arrow size */
+    }
+    .answer {
+      display: none; /* Hide answers by default */
+      color: #666;
+      line-height: 1.6;
+      font-size: 1em;
+      margin-bottom: 20px;
+      text-align: left; /* Adjust text alignment as needed */
+    }
+    p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
+.book {
+      color: #666;
+      line-height: 1.2;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+font-weight:bold;
+    }
+    a.one {
+      display: inline-block;
+      
+      padding: 20px 30px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.4em;
+    }
+    a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+<h3>It's still early days, and unfortunately, we're unsure which states or areas this is affecting. If you've received a notification like this and drive outside of Sydney Metro, please let us know via email <a href="mailto:ridesharesydney@protonmail.com">ridesharesydney@protonmail.com</a></h3>
+<hr>
+<h3>An update to Uber’s time and distance rates</h3>
+<span class="left">
+<p>Dear Driver,</p>
+
+<p>We review our pricing on an ongoing basis in an effort to balance a quality, reliable service for riders, with compelling earnings opportunities for driver partners.</p>
+
+<p>We’re writing to let you know that from 12-Aug-24, we will be changing the time and distance rates used to calculate rider fares.</p>
+
+<p>The changes will include different time and distance rates based on geography, as well as the time of the trip. In most cases, the rates will be lower than those currently used. We anticipate that these changes will lead to an increase in rider demand and result in more trips for driver-partners.</p>
+
+<p>We will provide more information to you on the new time and distance rates for your city, broken down by time and geography as applicable. The new rates will be available on waybills for trips from 12-Aug-24.</p>
+
+<p>We appreciate your understanding, and thank you for choosing to drive with Uber.</p><br />
+</span>
+
+<p><a class="one" href="https://ridesharesydney.github.io/linker/"><< Return Home</a></p>
+</div>
+
+  </div>
+  <script>
+    function toggleAnswer(id) {
+      var answer = document.getElementById(id);
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
