@@ -12,7 +12,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      
     }
     .container {
       background-color: #ffffff;
@@ -33,15 +33,35 @@
       font-size: 1.5em;
       margin-bottom: 20px;
     }
-    h4 {
+h4 {
       color: #777;
-      font-size: 1em;
+      font-size: 1.2em;
       margin-bottom: 10px;
+      cursor: pointer; /* Add cursor pointer to indicate clickable */
+      border-bottom: 1px solid #ccc; /* Add bottom border for separation */
+      padding-bottom: 5px; /* Add space below text */
+      position: relative; /* Position relative for pseudo-element */
+    }
+    h4::after {
+      content: "\25BA"; /* Unicode character for right arrow */
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8em; /* Adjust arrow size */
+    }
+    .answer {
+      display: none; /* Hide answers by default */
+      color: #666;
+      line-height: 1.6;
+      font-size: 1em;
+      margin-bottom: 20px;
+      text-align: left; /* Adjust text alignment as needed */
     }
     p {
       color: #666;
       line-height: 1.6;
-      font-size: .8em;
+      font-size: 0.9em;
       margin-bottom: 20px;
     }
 .book {
@@ -51,7 +71,7 @@
       margin-bottom: 20px;
 font-weight:bold;
     }
-    a {
+    a.one {
       display: inline-block;
       
       padding: 20px 30px;
@@ -71,12 +91,53 @@ font-weight:bold;
     <h1>Uber wants to reduce your take-home money from 12th August 2024<br /><br />
     Drivers are leading action<br />to fight the change</h1><br /><br />
 <span class="book">Bookmark this page, then...</span><br />    
-<a href="https://t.me/+iQUsjfijOKE5YTU1">Join the fight on Telegram</a><br /><br /><br />
-    <h4>Why are we using this link page?</h4>
+<a class="one" href="https://t.me/+iQUsjfijOKE5YTU1">Join the fight on Telegram</a><br /><br /><br />
+
+
+<h3>--- FAQ ---</h3>
+
+<h4 onclick="toggleAnswer('q1')">What's being done?</h4>
+<div id="q1" class="answer">   
+ <p>With the announcement on the 4th July 2024, it's still early days, but a small team are currently investigating the options. This may be join a union, it may be a 'strike', for want of a better word - but trust us we will have our voice heard!</br> For the time being, please join the chat and we'll update you there. Please note, it might take a few days for us to set a few plans into motion and have some discussions with lawyers, unions, etc</p>
+</div>
+
+<h4 onclick="toggleAnswer('q2')">How can I help</h4>
+<div id="q2" class="answer">
+<p>Our small team is dedicated to finding the way to make our voice heard, but we need some help in certain areas like legal (probono work), publicity/copyright and other key areas. If you think you're able to assist, please let us know via email <a href="mailto:ridesharesydney@protonmail.com">ridesharesydney@protonmail.com</a><br />Please note this service has a harsh spam filter on it, so make sure your seading emails from a real email address.</p>
+</div>
+
+<h4 onclick="toggleAnswer('q3')">Why are we using this link page?</h4>
+<div id="q3" class="answer">
     <p>Over time, we're needing to communicate important information out to everyone, and eventually one chat group isn't going to be enough!
-    This page will be updated over time with links to important news articles and other information.But in the meantime, above is the link to the Telegram chat!</p>
-    <h4>Why does this website look so... average?</h4>
-    <p>Honestly, because we got blindsided by a recent announcement from the rideshare company, and we needed to throw something together - fast!</p>
+    This page will be updated over time with links to important news articles and other information. But in the meantime, above is the link to the Telegram chat!</p>
+</div>
+
+    <h4 onclick="toggleAnswer('q4')">Why does this website look so... average?</h4>
+<div id="q4" class="answer">
+    <p>Honestly, because we got blindsided by a recent announcement from the rideshare company, and we needed to throw something together - fast!<br />I don't think anybody expected an announcement to decrease rates from rideshare companies, especially when the cost of living and the price of fuel is so high!</p>
+</div>
+
+    <h4 onclick="toggleAnswer('q5')">Who is the team investigating this?</h4>
+<div id="q5" class="answer">
+    <p>For the time being, we're just keeping to our self and we'll make some announcements soon.</p>
+</div>
+
+    <h4 onclick="toggleAnswer('q6')">I'm from the meadia, who can I talk to about this?</h4>
+<div id="q6" class="answer">
+    <p>Please email <a href="mailto:ridesharesydney@protonmail.com">ridesharesydney@protonmail.com</a> and we'll get back to you.<br />Please include your media outlet name, and your contact details. Initial replies might take 24 hours and are currently email based only at this stage. Interviews will occur at a later date.</p>
+</div>
+
   </div>
+  <script>
+    function toggleAnswer(id) {
+      var answer = document.getElementById(id);
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    }
+  </script>
+
 </body>
 </html>
